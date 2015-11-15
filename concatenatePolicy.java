@@ -1,5 +1,4 @@
-package SessionAlignment;
-
+package policy_analyzer;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,12 +12,28 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.List;
 
-import SessionAlignment.PassHtmlUtils;
+import policy_analyzer.PassHtmlUtils;
 public class concatenatePolicy {
 	
   public static void main( String args[])
   {
-	concatenateCorpus("corpus");
+	  /*
+	  String path="C:\\Users\\venceWEN\\Desktop";
+	  File file=new File(path);
+	  File[] tempList = file.listFiles();
+	  System.out.println("该目录下对象个数："+tempList.length);
+	  for (int i = 0; i < tempList.length; i++) {
+	   if (tempList[i].isFile()) {
+	    System.out.println("文     件："+tempList[i]);
+	   }
+	   if (tempList[i].isDirectory()) {
+	    System.out.println("文件夹："+tempList[i]);
+	   }
+	  }
+	  System.out.println(tempList.length);
+	  */
+
+	concatenateCorpus("C:\\Users\\venceWEN\\Desktop\\corpus");
   }
   
   public static void concatenateCorpus(String path)
@@ -27,7 +42,7 @@ public class concatenatePolicy {
 	 // List<String> l= sl.lemmatize(str);
 	  File file=new File(path);
 	  File[] tempList = file.listFiles();
-	  File printFile= new File("corpus.txt");
+	  File printFile= new File("C:\\Users\\venceWEN\\Desktop","corpus.txt");
 
 	FileWriter fw=null;
 	try {

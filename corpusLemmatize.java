@@ -1,4 +1,4 @@
-package SessionAlignment;
+package policy_analyzer;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -13,7 +13,7 @@ import java.util.HashSet;
 import java.util.List;
 
 import javax.swing.text.html.HTMLDocument.Iterator;
-import SessionAlignment.StanfordLemmatizer;
+
 public class corpusLemmatize {
 //not finished
 	public static void main(String args[])
