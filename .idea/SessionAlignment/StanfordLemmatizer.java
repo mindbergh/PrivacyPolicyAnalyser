@@ -1,4 +1,4 @@
-package policy_analyzer;
+package SessionAlignment;
 
 import java.util.LinkedList;
 import java.util.List;

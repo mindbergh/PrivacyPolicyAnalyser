@@ -1,17 +1,17 @@
-package policy_analyzer;
+package SessionAlignment;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PassHtmlUtils {
-	private final static String regxpForHtml = "<([^>]*)>"; // ¹ýÂËËùÓÐÒÔ<¿ªÍ·ÒÔ>½áÎ²µÄ±êÇ©
+	private final static String regxpForHtml = "<([^>]*)>"; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<ï¿½ï¿½Í·ï¿½ï¿½>ï¿½ï¿½Î²ï¿½Ä±ï¿½Ç©
 
-	private final static String regxpForImgTag = "<]*)\\s<\\s*img\\s+([^>]*)\\s*>"; // ÕÒ³öIMG±êÇ©
+	private final static String regxpForImgTag = "<]*)\\s<\\s*img\\s+([^>]*)\\s*>"; // ï¿½Ò³ï¿½IMGï¿½ï¿½Ç©
 
-	private final static String regxpForImaTagSrcAttrib = "src=\"([^\"]+)\""; // ÕÒ³öIMG±êÇ©µÄSRCÊôÐÔ
+	private final static String regxpForImaTagSrcAttrib = "src=\"([^\"]+)\""; // ï¿½Ò³ï¿½IMGï¿½ï¿½Ç©ï¿½ï¿½SRCï¿½ï¿½ï¿½ï¿½
 	/**
 	 * 
-	 * »ù±¾¹¦ÄÜ£ºÌæ»»±ê¼ÇÒÔÕý³£ÏÔÊ¾
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½æ»»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾
 	 * <p>
 	 * 
 	 * @param input
@@ -48,7 +48,7 @@ public class PassHtmlUtils {
 
 	/**
 	 * 
-	 * »ù±¾¹¦ÄÜ£ºÅÐ¶Ï±ê¼ÇÊÇ·ñ´æÔÚ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½Ð¶Ï±ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 	 * <p>
 	 * 
 	 * @param input
@@ -81,7 +81,7 @@ public class PassHtmlUtils {
 
 	/**
 	 * 
-	 * »ù±¾¹¦ÄÜ£º¹ýÂËËùÓÐÒÔ"<"¿ªÍ·ÒÔ">"½áÎ²µÄ±êÇ©
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"<"ï¿½ï¿½Í·ï¿½ï¿½">"ï¿½ï¿½Î²ï¿½Ä±ï¿½Ç©
 	 * <p>
 	 * 
 	 * @param str
@@ -102,12 +102,12 @@ public class PassHtmlUtils {
 
 	/**
 	 * 
-	 * »ù±¾¹¦ÄÜ£º¹ýÂËÖ¸¶¨±êÇ©
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½Ç©
 	 * <p>
 	 * 
 	 * @param str
 	 * @param tag
-	 *            Ö¸¶¨±êÇ©
+	 *            Ö¸ï¿½ï¿½ï¿½ï¿½Ç©
 	 * @return String
 	 */
 	public static String filterHtmlTag(String str, String tag) {
@@ -126,20 +126,20 @@ public class PassHtmlUtils {
 
 	/**
 	 * 
-	 * »ù±¾¹¦ÄÜ£ºÌæ»»Ö¸¶¨µÄ±êÇ©
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü£ï¿½ï¿½æ»»Ö¸ï¿½ï¿½ï¿½Ä±ï¿½Ç©
 	 * <p>
 	 * 
 	 * @param str
 	 * @param beforeTag
-	 *            ÒªÌæ»»µÄ±êÇ©
+	 *            Òªï¿½æ»»ï¿½Ä±ï¿½Ç©
 	 * @param tagAttrib
-	 *            ÒªÌæ»»µÄ±êÇ©ÊôÐÔÖµ
+	 *            Òªï¿½æ»»ï¿½Ä±ï¿½Ç©ï¿½ï¿½ï¿½ï¿½Öµ
 	 * @param startTag
-	 *            ÐÂ±êÇ©¿ªÊ¼±ê¼Ç
+	 *            ï¿½Â±ï¿½Ç©ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½
 	 * @param endTag
-	 *            ÐÂ±êÇ©½áÊø±ê¼Ç
+	 *            ï¿½Â±ï¿½Ç©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @return String
-	 * @Èç£ºÌæ»»img±êÇ©µÄsrcÊôÐÔÖµÎª[img]ÊôÐÔÖµ[/img]
+	 * @ï¿½ç£ºï¿½æ»»imgï¿½ï¿½Ç©ï¿½ï¿½srcï¿½ï¿½ï¿½ï¿½ÖµÎª[img]ï¿½ï¿½ï¿½ï¿½Öµ[/img]
 	 */
 	public static String replaceHtmlTag(String str, String beforeTag,
 			String tagAttrib, String startTag, String endTag) {
@@ -167,8 +167,8 @@ public class PassHtmlUtils {
 
 
 	public static void main(String[] args) {
-		//System.out.println(filterHtml("<p style='TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 6pt 0cm; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 10.5pt' align='left'></p><p>¶ÔÓÚ°²×¿4.0ÏµÍ³£¬Ê¹ÓÃµçÁ¿¿ØÖÆ´°¿ÚÐ¡²¿¼þ¿ÉÒÔÇáËÉ¿ØÖÆµ±Ç°²»ÓÃµÄ¹¦ÄÜ£¬´Ó¶øÑÓ³¤ÊÖ»úµç³ØÊ¹ÓÃÊ±¼ä¡£Ä¬ÈÏÇé¿öÏÂ£¬Õâ¸ö´°¿ÚÐ¡²¿¼þÏÔÊ¾ÔÚ×î×ó²àµÄÖ÷ÆÁÄ»ÖÐ¡£µ±¸Ã´°¿ÚÐ¡²¿¼þÖÐÏÔÊ¾ÁËÄú¾õµÃÓÃ²»×ÅµÄ¹¦ÄÜÊ±£¬¾Í¿ÉÒÔ¹Ø±ÕÕâÐ©¹¦ÄÜ£¬´Ó¶øÑÓ³¤µç³ØÊ¹ÓÃÊ±¼ä¡£<br>Èç¹ûµ±Ç°µÄËùÓÐÖ÷ÆÁÄ»ÖÐ¶¼Ã»ÓÐµçÁ¿¿ØÖÆ´°¿ÚÐ¡²¿¼þ£¬ÇëÖ´ÐÐÒÔÏÂ²½ÖèÌí¼Ó¸Ã´°¿ÚÐ¡²¿¼þ£º<br>1£®×ªÖÁ¡¾ËùÓÐÓ¦ÓÃ¡¿ÆÁÄ»£¬´¥Ãþ¡¾´°¿ÚÐ¡²¿¼þ¡¿±êÇ©¡£ </p><p>2£®»¬¶¯ÊÖÖ¸ä¯ÀÀ´°¿ÚÐ¡²¿¼þ£¬´ÓÖÐÕÒ³ö¡¾µçÁ¿¿ØÖÆ¡¿£¬È»ºó´¥Ãþ²¢°´×¡¸Ã´°¿ÚÐ¡²¿¼þ¡£</p><p></p><p style='TEXT-ALIGN: center'><span style='LINE-HEIGHT: 150%; FONT-FAMILY: ËÎÌå; COLOR: black'><img src='E:/resource/images/uploadfile/20130516133022937001.gif' border='0'></span></p>"));
-		//System.out.println( fiterHtmlTag("<p style='TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 6pt 0cm; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 10.5pt' align='left'></p><p>¶ÔÓÚ°²×¿4.0ÏµÍ³£¬Ê¹ÓÃµçÁ¿¿ØÖÆ´°¿ÚÐ¡²¿¼þ¿ÉÒÔÇáËÉ¿ØÖÆµ±Ç°²»ÓÃµÄ¹¦ÄÜ£¬´Ó¶øÑÓ³¤ÊÖ»úµç³ØÊ¹ÓÃÊ±¼ä¡£Ä¬ÈÏÇé¿öÏÂ£¬Õâ¸ö´°¿ÚÐ¡²¿¼þÏÔÊ¾ÔÚ×î×ó²àµÄÖ÷ÆÁÄ»ÖÐ¡£µ±¸Ã´°¿ÚÐ¡²¿¼þÖÐÏÔÊ¾ÁËÄú¾õµÃÓÃ²»×ÅµÄ¹¦ÄÜÊ±£¬¾Í¿ÉÒÔ¹Ø±ÕÕâÐ©¹¦ÄÜ£¬´Ó¶øÑÓ³¤µç³ØÊ¹ÓÃÊ±¼ä¡£<br>Èç¹ûµ±Ç°µÄËùÓÐÖ÷ÆÁÄ»ÖÐ¶¼Ã»ÓÐµçÁ¿¿ØÖÆ´°¿ÚÐ¡²¿¼þ£¬ÇëÖ´ÐÐÒÔÏÂ²½ÖèÌí¼Ó¸Ã´°¿ÚÐ¡²¿¼þ£º<br>1£®×ªÖÁ¡¾ËùÓÐÓ¦ÓÃ¡¿ÆÁÄ»£¬´¥Ãþ¡¾´°¿ÚÐ¡²¿¼þ¡¿±êÇ©¡£ </p><p>2£®»¬¶¯ÊÖÖ¸ä¯ÀÀ´°¿ÚÐ¡²¿¼þ£¬´ÓÖÐÕÒ³ö¡¾µçÁ¿¿ØÖÆ¡¿£¬È»ºó´¥Ãþ²¢°´×¡¸Ã´°¿ÚÐ¡²¿¼þ¡£</p><p></p><p style='TEXT-ALIGN: center'><span style='LINE-HEIGHT: 150%; FONT-FAMILY: ËÎÌå; COLOR: black'><img src='E:/resource/images/uploadfile/20130516133022937001.gif' border='0'></span></p>","p") );
+		//System.out.println(filterHtml("<p style='TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 6pt 0cm; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 10.5pt' align='left'></p><p>ï¿½ï¿½ï¿½Ú°ï¿½×¿4.0ÏµÍ³ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¿ï¿½ï¿½Æµï¿½Ç°ï¿½ï¿½ï¿½ÃµÄ¹ï¿½ï¿½Ü£ï¿½ï¿½Ó¶ï¿½ï¿½Ó³ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ê±ï¿½ä¡£Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ÅµÄ¹ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Í¿ï¿½ï¿½Ô¹Ø±ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Ü£ï¿½ï¿½Ó¶ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ê±ï¿½ä¡£<br>ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½Ð¶ï¿½Ã»ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸Ã´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<br>1ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã¡ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½ </p><p>2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¡ï¿½Ã´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</p><p></p><p style='TEXT-ALIGN: center'><span style='LINE-HEIGHT: 150%; FONT-FAMILY: ï¿½ï¿½ï¿½ï¿½; COLOR: black'><img src='E:/resource/images/uploadfile/20130516133022937001.gif' border='0'></span></p>"));
+		//System.out.println( fiterHtmlTag("<p style='TEXT-JUSTIFY: inter-ideograph; TEXT-ALIGN: left; LINE-HEIGHT: 150%; MARGIN: 6pt 0cm; FONT-FAMILY: 'Calibri','sans-serif'; FONT-SIZE: 10.5pt' align='left'></p><p>ï¿½ï¿½ï¿½Ú°ï¿½×¿4.0ÏµÍ³ï¿½ï¿½Ê¹ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¿ï¿½ï¿½Æµï¿½Ç°ï¿½ï¿½ï¿½ÃµÄ¹ï¿½ï¿½Ü£ï¿½ï¿½Ó¶ï¿½ï¿½Ó³ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ê±ï¿½ä¡£Ä¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ÅµÄ¹ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Í¿ï¿½ï¿½Ô¹Ø±ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Ü£ï¿½ï¿½Ó¶ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½Ê±ï¿½ä¡£<br>ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½Ð¶ï¿½Ã»ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½Â²ï¿½ï¿½ï¿½ï¿½ï¿½Ó¸Ã´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½<br>1ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ã¡ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½ </p><p>2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¡ï¿½Ã´ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</p><p></p><p style='TEXT-ALIGN: center'><span style='LINE-HEIGHT: 150%; FONT-FAMILY: ï¿½ï¿½ï¿½ï¿½; COLOR: black'><img src='E:/resource/images/uploadfile/20130516133022937001.gif' border='0'></span></p>","p") );
 		System.out.println(filterHtmlTag(" <SECTION> <SUBTITLE>Visitors from outside the United States</SUBTITLE><SUBTEXT>The Site's offices are located in the United States. If you visit the site from another country, please be aware that information you provide to us or that we obtain as a result of your use of the Site may be processed in and transferred to the United States and will be subject to U.S. law. U.S. privacy and data protection laws may not be equivalent to the laws in your country of residence. By using the Site or providing us with your information, you consent to the collection, transfer, storage, and processing of information to and in the United States. European Union Residents: AOL adheres to the EU-US Safe Harbor Privacy Principles of Notice, Choice, Onward Transfer, Security, Data Integrity, Access and Enforcement, and is registered with the U.S. Department of Commerce's Safe Harbor Program.</SUBTEXT></SECTION>","" ) );
 
 	}
