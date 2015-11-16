@@ -1,0 +1,78 @@
+<POLICY modification_date="" policy_url="http://www.bibsonomy.org/help_en/Privacy" website_category="Reference" website_index="078" website_url="bibsonomy.org">
+    <SECTION>
+        <SUBTITLE />
+        <SUBTEXT>en
+de
+
+BibSonomy
+
+Help
+:: Privacy
+::
+
+The blue social bookmark and publication sharing system.
+
+home
+myBibSonomy
+add post
+post bookmark
+post publication
+groups
+popular
+posts
+tags
+authors
+concepts
+discussions</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Terms Of Use</SUBTITLE>
+        <SUBTEXT>#Using BibSonomy implies agreement with these Terms of Use and the Privacy Statement.
+The Terms of Use and the Privacy Statement may be changed without notice. It is the user's responsibility to check the Terms of Use and the Privacy Statement periodically.
+BibSonomy is a social bookmarking service which can be used free of charge.
+BibSonomy does not give any warranties regarding data integrity, availability, fitness for a particular purpose, or quality of content.
+Users give BibSonomy the right to publish the content they post in the system.
+BibSonomy is not responsible for content posted by users.
+Users are solely responsible for the content they publish.
+Users will not use BibSonomy in a fashion which may corrupt the service or threaten the privacy of other users, including, but not limited to:
+Posting content in order to promote certain web sites in search engine rankings (spam)
+Posting content in order to establish commercial transactions (advertisement)
+Hacking or trying to obtain passwords of other users
+Denial of service attacks against BibSonomy
+Automatic harvesting of BibSonomy contents
+Giving account information to third parties.
+Users may be excluded from the system temporarily or permanently if considered to be violating the Terms of Use or the Privacy Statement.
+Content posted by users may be deleted or withheld from the public pages of BibSonomy if considered to be violating the Terms of Service or the Privacy Statement.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Privacy Protection</SUBTITLE>
+        <SUBTEXT>#BibSonomy is run by the the Knowledge and Data Engineering team of the University of Kassel as a research project. Concerning the collection of private data BibSonomy is subject to the regulations of the Hessischen Datenschutzgesetzt and the Telemediengesetz of which § 33 HDSG has central importance.
+
+In order to carry out the research, BibSonomy collects more data of its users and analyzes it in a greater extend than commercial web applications would do. The information is being used to provide and improve recommendation services, spam detection or ranking functions and also for the design of privacy aspects in bookmarking systems. Results can later be applied to other web 2.0 applications. Since science is an open process the options for the data's usage can not be finalized or completed. For BibSonomy, however, there is no interest in the real person behind the userprofile. The information will not be used for advertising. BibSonomy will not give information about the user to third parties. The only exception to this rule are other research groups, which can achieve a part of the data set, and use it for their own research and to revise the findings of the BibSonomy project. This data is made pseudonymous though.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Unregistered and anonymous users</SUBTITLE>
+        <SUBTEXT>#In line with the usage of BibSonomy the following data is gathered and processed to provide the system's services and to collect statistical information : the name of the requested site, the time of the request, the size of transfered data, the protocol message, if the request was successful, the referrer url and the cookie with its session id. Additionally , the ip adress of the calling computer is stored for research purposes, eg. for developing spam detection algorithms . In order to analyse the user behaviour, which is being explored to create new algorithms and to evaluate them , BibSonomy uses a click-log functionality , which stores every user click on a link within BibSonomy. Indeed , BibSonomy does neither have the resource nor the intent to relate this data with the person behind the user.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Registered users</SUBTITLE>
+        <SUBTEXT>#Inventory data
+
+#In the line of the registration BibSonomy collects the following data for the ground of contract of use, which might make conclusions to the identity of the user possible and with that also represent personal data of the user: the nickname, password and email adress. The nickname and password are used to secure the access to the user's account. The nickname itself is also part of the entered bookmarks and publications, which were marked public. The email adress is used for research in the field of spam discovery and is also used for the process of the activation of the user account in order to prevent the abuse of extrinsical information. The email adress or other registration data wont be circulated to third parties.
+Usage data
+
+#During the usage BibSonomy collects the following data, which may allow for drawing conclusions and so might represent personal information: Information for the authorization process like username and password, or begin and end of a session, the name of the requested file, timestamp of entered and requested data, the size of the data transmitted, the success of transactions, the referrer url and session cookies which contain user ids. For research reasons the ip adress of the requesting systems is going to be stored. All the data is used to investigate matters of design aspects of data privacy, spam detection, ranking, recommendation or the overall improvement of the system. BibSonomy makes the collected data excluding the username, password and ip adress available for other research facilities for scientific work in pseudonymous form. It can not be categorically ruled out, that these prepared information can't be connected to a concrete user within the system by comparison of the data set with the published entries of this user. If users are active using their real names as user names or their identity emerge from their public entries , BibSonomy can not eliminate the possibility of personal references.
+Entries
+
+#The entries created by a BibSonomy user during the process of using the system, i.e. the bookmarks and the links to posted literature, are used to provide the offered functionality to store the information for the same user for later access or in case of public entries for access of others including the possibility to copy the entries for his or her own collection. Public entries are used for research purposes like the creation of rankings and tag clouds and are processed during search in combination with the user who owns this entry and the user who started the search. Additionally there is the possibility for registered users to access and download public entries by using the programming api. The entries are being used for research purposes in fields like spam detection, recommender functions and are part of the data set, which BibSonomy makes available in pseudonymous form for other research facilities. If users end their memberships by deleting their user accounts, their entries are locked and can not be accessed by users. The entries are stored, but will only be used for research purposes.
+Advertisment
+
+#BibSonomy is free of advertisment. No personal information will be used for assigning personalized advertisments and will be circulated to third parties for purposes of advertising.
+Area of application
+
+#This privacy protection policy applies only for the collection of personal data by BibSonomy, but not for the service providers which are referenced within the entries of BibSonomy or other external web sites.
+Right of disclosure
+
+#Users have the right to request information about the personal data connected to their username or person which is stored in BibSonomy free of charge. webmaster@BibSonomy.org</SUBTEXT>
+    </SECTION>
+</POLICY>

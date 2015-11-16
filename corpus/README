@@ -1,0 +1,12 @@
+The corpus and questions are released under Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) license. This corpus is only made available for teaching, scholarship or research purposes. By using this corpus, you agree to acknowledge its origin by citing the paper listed below. If you have any issues with the dataset please feel free to contact us.
+
+
+@Inproceedings {ramanath:2014,
+    author = {Rohan Ramanath and Fei Liu and Norman Sadeh and Noah Smith},
+    booktitle = {Proceedings of ACL},
+    month = {June},
+    publisher = {Association for Computational Linguistics},
+    title = {Unsupervised Alignment of Privacy Policies using Hidden Markov Models},
+    year = {2014},
+}
+
