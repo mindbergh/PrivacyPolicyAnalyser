@@ -14,7 +14,7 @@ import java.util.List;
 
 import policy_analyzer.PassHtmlUtils;
 public class concatenatePolicy {
-	
+	// this method is used to generate concatenatedCorpus
   public static void main( String args[])
   {
 	concatenateCorpus("corpus");
@@ -89,7 +89,7 @@ public class concatenatePolicy {
 						sessionToWrite+=(toWrite+" ");
 					}
 				}
-				bw.write("<enddoc>");
+				bw.write("<enddoc>\n");
 				reader.close();
 			} catch (IOException e) {
 				e.printStackTrace();

@@ -68,11 +68,10 @@ public class ConstructVocabulary {
                     }
                 }
 
-                if( tempString.contains("<endDoc>") )
+                if( tempString.contains("<enddoc>") )
                 {
                     docFlag.clear();
                 }
-
             }
             reader.close();
         } catch (IOException e) {
