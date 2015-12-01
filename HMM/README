@@ -1,0 +1,8 @@
+1. 'initTrainData.m' takes in 'XTrain'file and 'LabeledVol.txt'file, and initiate model parameters;
+    Then it stores all the generated vars in 'TrainMat.mat'file;
+
+2. 'EM_estimate.m' takes in the vars in 'TrainMat.mat'file, and execute to train the HMM Model;
+    a, b, p is the final HMM model parameters;
+
+REMAINS to be done: Viterbi to decode states transitions
+                    cluster the sections
