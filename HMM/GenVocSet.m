@@ -13,3 +13,5 @@ while ischar(tline)
     nVoc=nVoc+1;
     tline = fgets(fid);
 end
+
+save 

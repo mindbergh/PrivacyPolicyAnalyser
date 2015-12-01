@@ -1,12 +1,14 @@
 function [Beta] = Backward(a, b, p, X)
-N= length( X(:,1) );
-T= length( X(1,:) );
-K= length( a(1,:) );
-M= length( b(1,:) );
+
+N= size(X,1);
+%T= length( X(1,:) ); each sequence has different sections
+K= size(p,1);
+M= size(b,2); % nVoc emissions
 
 Beta= cell(N,1);
 
 for m= 1: N
+    T= size(X{m},1);
     bt= zeros(T,K);
     for i= 1: K
         bt(T,i)= 1;
@@ -16,11 +18,17 @@ for m= 1: N
         for i=1:K
             sum=0;
             for j=1:K
-                sum= sum+ a(i,j)*b(j,X(m,t+1) )*bt(t+1,j);
+                sumB=1;
+                for u=1:M
+                    if X{m}(t+1,u) ~=0
+                        sumB=sumB* b(j,u)^X{m}(t+1,u);
+                    end
+                end
+                sum= sum+ a(i,j)*sumB*bt(t+1,j);
             end
             bt(t,i)= sum;
         end
     end
     
-    Beta(m,1)= bt;
+    Beta{m}= bt;
 end

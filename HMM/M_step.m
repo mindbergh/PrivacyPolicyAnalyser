@@ -1,7 +1,6 @@
 function [a, b, p] = M_step(Gamma, Xi, X, M, K)
 
-N= length( X(:,1) );
-T= length( X(1,:) );
+N= size(X,1);
 
 a= zeros(K,K);
 p= zeros(K,1);
@@ -10,6 +9,7 @@ for i=1:K
   for j=1:K
       nome=0;
       for m=1:N
+        T= size(X{m},1);
         for t=1:T
           nome=nome+ Xi{m}(t,i,j);
         end
@@ -18,6 +18,7 @@ for i=1:K
       deno= 0;
       for k=1:K
         for m=1:N
+          T= size(X{m},1);
           for t=1:T
             deno= deno+ Xi{m}(t,i,k);
           end
@@ -25,7 +26,7 @@ for i=1:K
       end
       
       a(i,j)=nome/deno;
-    end
+   end
 end
 
 for i=1:K
@@ -43,10 +44,9 @@ for k=1:K
   for j= 1:M
     sum=0;
     for m=1:N
+      T= size(X{m},1);
       for t=1:T
-        if X(m,t)== j
-          sum=sum+ Gamma{m}(t,k);
-        end
+          sum=sum+ Gamma{m}(t,k)* X{m}(t,j);
       end
     end
     B(k,j)= sum;
