@@ -1,0 +1,32 @@
+<POLICY modification_date="" policy_url="http://www.w3.org/Consortium/Legal/privacy-statement-20000612" website_category="Computers" website_index="091" website_url="w3.org">
+    <SECTION>
+        <SUBTITLE />
+        <SUBTEXT>Some web pages in the W3C web site have different privacy policy statements. This page includes the Public and Member statements.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>W3C Privacy Statement for Non-Members</SUBTITLE>
+        <SUBTEXT>Summary:
+
+We make no effort to identify public users of our site. No identifying data is disclosed to any third party for any purpose. Data that we collect is used only for server administration and Web protocol research.
+This statement applies to non-member interactions with the W3C Web servers. It does not apply to email sent to W3C staff or lists. Any questions regarding the web site and the privacy policy can be directed to site-policy@w3.org. Email interactions are guided by general net-etiquette conventions.
+As is typical, we log http requests to our server. This means that we know the originating IP (e.g. 18.29.0.1) address of a user agent requesting a URL. We also know the Referer and User-Agent information accompanied with an HTTP request. We do not log the specific identity of visitors. We occasionally analyze the log files to determine which files are most requested and the previous site or user agent which prompted the request. Our logging is passive; we do not use technologies such as cookies to maintain any information on users.
+We also log requests to our search, cgi, and list maintenance services. This data is only used for administration and researching the efficacy of our tools.
+Logged information is kept indefinitely as admistrative and research material; it is not disclosed outside of W3C host site personnel. Aggregate (completely non-identifying) statistics generated from these logs may be reported as part of research results.
+See also:
+Privacy Statement for Teleconference Bridge Status
+Privacy Statement for Access Request Page
+User Information Database Privacy Policy</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>W3C Privacy Statement for Members</SUBTITLE>
+        <SUBTEXT>Summary:
+
+We use member related information for the purposes of administering the W3C, and communicating and collaborating with our members.
+This statement (and the Public Statement above) applies to member and invited expert interactions with the W3C Member Web site. It does not apply to our non-member site nor email sent to W3C staff or lists. Any questions regarding the web site and the privacy policy can be directed to site-policy@w3.org. Email interactions are guided by general net-etiquette conventions.
+Members' interactions with the site are authenticated. Consequently we have the capability to identify users and their activities.
+By requesting a password you are added to our newsletter mailing list and your identity is relayed to Advisory Committee representative (AC rep).
+We trace membership of lists for chairmen of Working Groups, and at the request of AC representatives -- but only for people in their organization.
+This is commensurate with the AC representative role as the single and responsible point of contact for their organization.
+Very often, the participants of an activity, the staff contact, or working group chair will determine the degree of publicity inherent to a specific W3C activity.</SUBTEXT>
+    </SECTION>
+</POLICY>

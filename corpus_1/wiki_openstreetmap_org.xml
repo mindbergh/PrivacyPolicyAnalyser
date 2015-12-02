@@ -1,0 +1,59 @@
+<POLICY modification_date="August 01, 2013" policy_url="http://wiki.openstreetmap.org/wiki/Privacy_Policy" website_category="Reference" website_index="079" website_url="openstreetmap.org">
+    <SECTION>
+        <SUBTITLE />
+        <SUBTEXT>Privacy Policy
+Help
+Available languages
+• Deutsch • English
+show
+Other languages — Help us translating this wiki
+This page describes the OpenStreetMap privacy policy. It describes what personal information we may be gathering from you, who can see this information, and what options you have for controlling this.
+Contents [hide]
+1 Community development
+2 Other Policies
+3 Current Privacy Policy
+3.1 GPS Trace Data
+3.2 Map Data
+3.3 User 'home' location
+3.4 Email Addresses
+4 Discussion</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Community development</SUBTITLE>
+        <SUBTEXT>Development of the software behind OpenStreetMap, is a community effort, with many developers involved and work taking place on many separate components. Generally a good level of care is being taken to ensure that personal information of mappers contributing to the project, will not fall into the wrong hands. This has come about as a series of independent decisions within the design of the various components. The following descriptions are a de facto accumulation of this into a 'privacy policy' describing how we work with the data. We are working to improve the technology to offer a more coherent privacy model.
+You should always view OpenStreetMap systems and software with a questioning mind, and feel free to raise any concerns you have about matters of privacy via our Contact channels.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Other Policies</SUBTITLE>
+        <SUBTEXT>As well as privacy issues, users and contributors must also be aware of the OpenStreetMap License. This includes disclaimers. We also have an Acceptable Use Policy covering various types of server usage.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Current Privacy Policy</SUBTITLE>
+        <SUBTEXT />
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>GPS Trace Data</SUBTITLE>
+        <SUBTEXT>GPS data is uploaded in the form of individual GPX files. These are kept as raw files, as well as imported into the database. GPX files can be marked "public" by the uploader; this is completely unrelated to the option of making one's edits "public".
+When GPS data for an area is downloaded via the API no indication is provided of which user uploaded a point, or of the timestamp that was associated with the point. Points are however returned in timestamp order. GPS data downloaded in this way will include points from traces which were not marked as public.
+If a GPS trace is marked as public when it is uploaded then the raw trace may be downloaded from the web site or using an API call. In this case the user's display name is shown (regardless of whether the user has made their edits public) and the timestamps in the GPX file will be included. Also, any additional information placed in the GPX file will still be present, e.g. waypoints with their names and/or notes entered, associated symbols, elevation data, etc.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Map Data</SUBTITLE>
+        <SUBTEXT>All edits made to the map are recorded in the database with the user ID of the user making the change, and a timestamp at the time of change upload. In general all of this information is also made available to everyone via the website, including links to allow everyone to easily cross-reference which user has made which edit.
+Historically OpenStreetMap offered an option to make "anonymous edits". This means the website does not display an association between edits and user ID. We intend to continue respecting the wishes of those users who (in the past) made edits in this mode, however we no longer allow users to make further edits in anonymous mode. This is because revealing the user ID of a user making a change, is not deemed to present a serious privacy problem (a user ID does not necessarily need to reveal a user's real name or any other personal information), whereas hiding this information creates serious problems when tracing vandalism and otherwise understanding map editing history. You can find out more about this, on the Anonymous edits page.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>User 'home' location</SUBTITLE>
+        <SUBTEXT>If a user sets a home location then they will appear on the "nearby mappers" list for other people with a home location near theirs. This is an option on your account settings page.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Email Addresses</SUBTITLE>
+        <SUBTEXT>The registered email address for an OSM user account, will never intentionally be published on the internet anywhere, shared with third party organisations, or revealed directly to other logged in users. Email addresses will be used by the server to notify the user if another user has sent a message through the website. Only System Administrators will have direct access to email address data. It may be used by these people to contact users directly about their edits or other OpenStreetMap related issues.
+Note that some other types of Accounts used by developers/community do expose email address information more publicly (due to technical limitations of the software used, rather than policy decisions) The Trac system exposes your email address in plaintext on the page if the email address (rather than the display name) is used to login. The mailing list system exposes email addresses of people posting messages, in the archive web pages, but with obfuscation. If you want to post to the list, the system also requires you to register with your proper 'from' address, not a forwarding address.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>Discussion</SUBTITLE>
+        <SUBTEXT>As mentioned above, feel free to raise any concerns you have about matters of privacy via our Contact channels.
+Discuss the contents of this page on Talk:Privacy Policy</SUBTEXT>
+    </SECTION>
+</POLICY>

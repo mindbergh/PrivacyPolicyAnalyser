@@ -1,0 +1,36 @@
+<POLICY modification_date="March 28, 2011" policy_url="http://blog.feedly.com/2008/06/18/feedly-and-privacy/" website_category="Computers" website_index="086" website_url="feedly.com">
+    <SECTION>
+        <SUBTITLE />
+        <SUBTEXT>feedly and privacy
+Posted on June 18, 2008 by @feedly
+(Updated on March 28th, 2011)
+
+There has been a couple of questions regarding feedly privacy in my inbox. I will try to address the question here so that everyone benefit from it and the answer can be further clarified if necessary.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>FEEDLY WHAT'S NEW</SUBTITLE>
+        <SUBTEXT>Question: What part of the feedly information gets shared with other users.
+
+Answer: The only feedly information which gets shared with other users are the articles you recommend and tweet from feedly. Other users will not be able to know what sources and articles you read unless you explicitly recommend or tweet an article from that sources.
+
+The articles you share in feedly are automatically shared in Google Reader so that other users can subscribe to your shared articles feed in Google Reader or Google Buzz.
+
+Other tools try to infer how interesting an article is based on how much time you spent reading it and/or if you clicked on a link or viewed a video. We consciously decided to do *none* of that.
+
+Question: Google Reader allows me to keep my shared item private and share it only with a specific subset of users. Does feedly provide this feature as well?
+
+Answer: No. In feedly, we decided to try to start by replicating the flickr model and all items shared or annotated are automatically available to the entire feedly community. As the service matures, we will look into offering more granularity.
+
+Question: What data is feedly collecting and storing on the feedly servers?
+
+Answer: At account creation time, we create a profile and import your user id, your nickname and email. This allows users to search and find other users and follow their recommendations. If you have an existing Google Reader account, we import your OPML (list of categories and feeds). This allows us to perform collaborative filtering and suggest new sources you might be interested in based on sources you have already subscribed to (similar to iTunes genius concept). If not, you can pick and choose and import a subset of your bookmarks or an existing netvibes or bloglines account. During reading time, we capture how many articles from a source a user reads, recommends or tweet from feedly. This allows us to understand which sources you like best and better showcase articles from those sources in the digest and cover. When someone follows you in feedly/google reader, they only see the articles you have shared.</SUBTEXT>
+    </SECTION>
+    <SECTION>
+        <SUBTITLE>FEEDLY MINI TOOLBAR</SUBTITLE>
+        <SUBTEXT>Question: Does feedly mini keep track of what web pages I browse?
+
+Answer: The answer is no. Because feedly is an extension, all the integration is performed in real-time on the client. As such the feedly service does not see or track at all what pages you navigate on.
+
+Feedly uses Google Analytics to track anonymously which subset of features are being used. We use that aggregated usage information to continuously enhance the design of the product.</SUBTEXT>
+    </SECTION>
+</POLICY>
