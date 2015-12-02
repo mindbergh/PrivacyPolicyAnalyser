@@ -4,7 +4,7 @@ function [a,b,p]=initParas(K,nVoc)
 %each is initiated by 1/K
 a= zeros(K,K);
 for i =1:K
-    for j=i:K
+    for j=1:K
        a(i,j)= 0.9;
     end
 end

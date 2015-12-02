@@ -1,0 +1,32 @@
+<POLICY modification_date="" policy_url="http://security.wmtransfer.com/asp/commoninfo.asp" website_category="Business" website_index="070" website_url="wmtransfer.com">
+    <SECTION>
+        <SUBTITLE />
+        <SUBTEXT>General
+
+The openness of protocols and imperfection of operating systems do not protect users connected to local or global networks from damage or theft of data.
+Files with private key, personal logins, passwords or other secret and significant data are subject to steal because such data provide access to different services and resources.
+
+The whole complex of measures and special hard and software devices (firewalls, proxy servers) are used in WebMoney Transfer to prevent unauthorized access.
+
+If you wish to prevent your computer from unauthorized access, follow our pieces of advice. In this case, you can make payments worth thousands of dollars from your computer without any fear to lose them.
+
+To prevent your computer from unauthorized access you just need to follow these recommendations:
+
+It is advisable to install Windows 7 on your computer. Security of Linux (Unix) requires HIGHLY qualified specialists and therefore it can hardly be advisable for use.
+Regularly update Service Park and Hot-fix at windowsupdate.
+Maximally approximate OS security to the S2 standard or ITSEC (refer to
+http://www.microsoft.com/security/default.aspx
+http://www.microsoft.com/security/pc-security/protect-pc.aspx
+Install the personal Outpost, ZoneAlarm or analogous to them firewalls (Windows 7 has a built-in firewall) and close all the ports and IP addresses except for the ones necessary for your work (ports and IP addresses required for WebMoney Transfer are described at www.wmtransfer.com).
+Regularly update your anti-virus base
+Test all incoming information (email, news) on Trojans or other viruses and never run any software(.com, .exe), scripts (.js, .vbs), files with macrocommands (.doc), and package files (.bat, .pif) if they came from a doubtful source.
+Store files with secret information on diskettes, CD, smart or flash cards.
+Regularly back up secret files.
+Don't forget to remove the diskette and put in a safe place having logged out.
+Store the removable carrier with secret information and its backup separately, in different places.
+Study the security possibilities of the systems you are using.
+Never leave your computer unattended when having logged into WebMoney Transfer. Be sure store diskettes with secret information in a safe place.
+Never let any extraneous software access your passwords and key. If any extraneous software demands you to specify your WebMoney password, you must not enter it. Only WebMoney Keeper must be able to access your password and key in the system.
+Our recommendations will increase the security of your computer and help you manage your electronic funds privately and secure.</SUBTEXT>
+    </SECTION>
+</POLICY>

@@ -1,9 +1,11 @@
 function [a, b, p] = M_step(Gamma, Xi, X, M, K)
 
 N= size(X,1);
-
 a= zeros(K,K);
 p= zeros(K,1);
+globalMinB= 1;
+
+disp('start M step')
 
 for i=1:K
   for j=1:K
@@ -61,5 +63,22 @@ for k=1:K
       deno=deno+ B(k,i);
     end
     b(k,j)=nome/deno;
+    if b(k,j)<globalMinB && b(k,j)~=0
+     globalMinB= b(k,j);
+    end
   end
 end
+
+disp('finish M step')
+save('globalMin','globalMinB');
+%have to multiply to avoid escaping double range
+%for B
+tmp= globalMinB;
+count=0;
+while tmp<1
+    tmp=tmp*10;
+    count=count+1;
+end
+count= count-1;
+b=b.*10^count;
+

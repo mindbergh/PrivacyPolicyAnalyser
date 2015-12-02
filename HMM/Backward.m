@@ -15,19 +15,26 @@ for m= 1: N
     end
     
     for t= T-1:-1:1
+        SumB= zeros(K,1); % record last k's sumB s
+                               %SumB(j) records b(j,X(m,t+1) )
+        for j=1:K
+            SumB(j)= 1;
+            for u=1:M
+                if X{m}(t+1,u) ~=0
+                    SumB(j)=SumB(j)* b(j,u)^X{m}(t+1,u);
+                end
+            end
+        end
+         
         for i=1:K
             sum=0;
             for j=1:K
-                sumB=1;
-                for u=1:M
-                    if X{m}(t+1,u) ~=0
-                        sumB=sumB* b(j,u)^X{m}(t+1,u);
-                    end
-                end
-                sum= sum+ a(i,j)*sumB*bt(t+1,j);
+                sum= sum+ a(i,j)*SumB(j)*bt(t+1,j);
             end
             bt(t,i)= sum;
         end
+        Str = sprintf('backward:%d doc,%d segment',m,t);
+        disp(Str);
     end
     
     Beta{m}= bt;
