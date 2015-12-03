@@ -23,10 +23,10 @@ Date: June 28, 2015
 """
 import pickle
 import time
+import csv
 
 from feature import *
 from liblinearutil import *
-from sklearn.externals import joblib
 
 class Train(object):
     def __init__(self, train_file, stpfile, features, feature_file, options=''):
@@ -70,10 +70,10 @@ class Train(object):
         to_write = []
         for line in open(self.train_file):
             label,query = line.split('\t')
-            query = query.lower()
             feature_string = self._convert_query_to_string(query)
             feature_string = label + feature_string + '\n'
             to_write.append(feature_string)
+
         to_write_string = ''.join(to_write)
 
         output = open(self.feature_file, 'w')
@@ -102,15 +102,31 @@ class Train(object):
     
         return feature_string
 
+
+def preprocess_trainning_data(raw_file, train_file):
+    with open(raw_file, 'r') as f:
+        with open(train_file, 'w') as trainning:
+            csv_file = csv.reader(f)
+            for line in csv_file:
+                label, query = line[3], line[1]
+                query = query.lower()
+                trainning.write(label + '\t' + query + '\n')
+
+
 def main():
     ### Train Wenjun's classifier
     # Name of files needed when training a model
+
     date = time.strftime('%Y-%m-%d')
-    train_file = 'training' # name of original training file
+    train_file = 'data/training' # name of original training file
+    raw_file = 'data/raw_data'
+
     feature_file = 'models/training_file_'+date # name of transformed training file
     feature_output = 'models/features_'+date # name of feature file
     stpfile = 'english.stp' # english stopwords file
     feature_arg = '-uni -pos2 -stem -stprm' # types of features need to extract
+
+    preprocess_trainning_data(raw_file, train_file)
 
     log = open('models/training_log','a') # log file
     log.write('Feature Arguments: %s\n-------------------------------\n'% feature_arg)
