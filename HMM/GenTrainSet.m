@@ -14,7 +14,13 @@ while ischar(tline)
     C = strsplit(tline);
     if isempty(findstr(tline,'<enddoc>') )
         nSessions=nSessions+1;
-        for i= 1:(length(C)-2)
+        
+        len=20;                 %modify
+        if len>(length(C)-2)
+            len= (length(C)-2);
+        end;
+        
+        for i= 1:len  % modify: only check the first 20 words
            str=char( C(i) );
            if ~isempty(str)
                 num= str2num(str);

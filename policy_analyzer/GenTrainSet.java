@@ -12,7 +12,6 @@ public class GenTrainSet {
     public static void main(String args[])
     {
         StanfordLemmatizer sl=new StanfordLemmatizer();
-        //List<String> l= sl.lemmatize(str);
         File printFile= new File("XTrain");
         FileWriter fw=null;
         try {

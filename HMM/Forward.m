@@ -25,7 +25,6 @@ for m= 1: N
                 end
             end
         end
-        %SumB
         
         for i=1:K
             sum=0;
