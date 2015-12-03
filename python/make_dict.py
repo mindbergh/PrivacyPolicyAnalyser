@@ -7,12 +7,14 @@ WORKING_DIR = "/Users/fangming/Downloads/corpus/"
 
 policys = []
 
+
 def make_dict_from_subtitle(word_set, subtitle):
     try:
         for word in subtitle.split():
             word_set.add(word)
     except:
         return
+
 
 def make_dict():
     word_set = set()
@@ -37,6 +39,7 @@ def make_dict():
         print word, count
         count += 1
 
+
 def make_subtexts():
     for root, dirs, files in os.walk(WORKING_DIR):
         for file in files:
@@ -53,7 +56,6 @@ def make_subtexts():
                                             print subtitle
                     except:
                         continue
-
 
 
 if  __name__ == "__main__":
