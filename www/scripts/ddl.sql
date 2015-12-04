@@ -7,7 +7,7 @@ CREATE TABLE policy (
 );
 
 CREATE TABLE section (
-  sid      INTEGER PRIMARY KEY,
+  sid      INTEGER PRIMARY KEY AUTOINCREMENT,
   pid      INTEGER NOT NULL,
   subtitle TEXT,
   subtext  TEXT,
