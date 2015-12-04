@@ -1,0 +1,23 @@
+{% extends "ppa/base.html" %}
+
+{% block content %}
+
+    <h1 align="center">Analyze Website Privacy Policy</h1>
+
+    <div>
+        {% for section in sections %}
+            <div class="list-group">
+                <a href="#" class="list-group-item active">
+                    <h4 class="list-group-item-heading">{{ section.subtitle }}</h4>
+
+                    <p class="list-group-item-text">{{ section.subtext }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="btn-group" role="group" aria-label="actions">
+        <button type="button" class="btn btn-default">Next Policy</button>
+        <button type="button" class="btn btn-default">Analyse it!</button>
+    </div>
+{% endblock %}

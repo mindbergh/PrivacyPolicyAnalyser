@@ -11,4 +11,4 @@ def dashboard(request):
     context['policy'] = policy
     context['sections'] = sections
 
-    return render(request, 'ppa/index.html', context)
+    return render(request, 'ppa/dashboard.html', context)
