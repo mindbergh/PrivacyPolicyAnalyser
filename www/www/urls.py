@@ -18,5 +18,5 @@ from django.conf.urls import url
 from ppa import views
 
 urlpatterns = [
-    url(r'^$', views.homepage),
+    url(r'^$', views.dashboard),
 ]

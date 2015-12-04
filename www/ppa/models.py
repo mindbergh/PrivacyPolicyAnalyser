@@ -130,7 +130,7 @@ class DjangoSession(models.Model):
 
 
 class Policy(models.Model):
-    pid = models.IntegerField(primary_key=True, blank=True, null=True)
+    pid = models.IntegerField(primary_key=True)
     title = models.TextField()
 
     class Meta:
@@ -139,7 +139,7 @@ class Policy(models.Model):
 
 
 class Section(models.Model):
-    sid = models.IntegerField(primary_key=True, blank=True, null=True)
+    sid = models.IntegerField(primary_key=True)
     pid = models.ForeignKey(Policy, db_column='pid')
     subtitle = models.TextField()
     subtext = models.TextField()

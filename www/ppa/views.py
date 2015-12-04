@@ -1,9 +1,14 @@
 from django.shortcuts import render
 
+from utils.corpus_manager import policy_selector
 
-def homepage(request):
+
+def dashboard(request):
     context = {}
 
-    return render(request, 'ppa/index.html', context)
+    policy, sections = policy_selector()
 
-# Create your views here.
+    context['policy'] = policy
+    context['sections'] = sections
+
+    return render(request, 'ppa/index.html', context)

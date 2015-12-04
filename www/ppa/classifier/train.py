@@ -135,7 +135,7 @@ def main():
     training.convert_file()
     # Use LibLINEAR to train the model and save the model
     y, x = svm_read_problem(feature_file)
-    m = train(y, x, '-c 3 -s 1 -B 1 -e 0.01 -q')
+    m = train(y, x, '-c 3 -s 1 -B 1 -e 0.01 -v 5 -q')
 
     print m
     save_model('models/model', m)
