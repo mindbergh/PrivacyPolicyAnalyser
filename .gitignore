@@ -18,4 +18,5 @@ hs_err_pid*
 
 models
 data
+*.sqlite3
 
