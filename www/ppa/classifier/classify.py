@@ -20,7 +20,6 @@ import nltk
 
 from feature import *
 from liblinearutil import *
-from sklearn.externals import joblib
 
 class Classifier(object):
     def __init__(self):
@@ -28,12 +27,12 @@ class Classifier(object):
         All variables which would be used by every query classification and parsing are listed here.
         Only need to create Classifier object once, i.e. initialize once
         """    
-        self.action_model, self.type_model = self._get_model()
+        self.section_model = self._get_model()
         self.stopwords = stopword('english.stp')
         self.feature_arg = parse_options('-uni -pos2 -stem -stprm')
         self.feature_list = self._get_feature_list()
         self.type_words = self._set_type_words()
-        self.labels = [21,22,23,24,5,6,7]
+        self.labels = [0, 1]
 
     def _get_model(self):
         """Load model
@@ -42,14 +41,9 @@ class Classifier(object):
 
         Return: models, action model and type model
         """
-        date = str(datetime.date.today())
-        m1 = load_model('models/model_'+date)
-        if m1 == None:
-            date = str(datetime.date.fromordinal(datetime.date.today().toordinal()-1))
-            m1 = load_model('models/model_'+date)
-        m2 = joblib.load('models/type_model_'+date)
+        m1 = load_model('models/model')
 
-        return m1, m2
+        return m1
 
     def _get_feature_list(self):
         """Load feature file
@@ -59,14 +53,9 @@ class Classifier(object):
         Return: Feature list
         """
         date = str(datetime.date.today())
-        try:
-            infile = open('models/features_'+date)
-        except IOError:
-            date = str(datetime.date.fromordinal(datetime.date.today().toordinal()-1))
-            infile = open('models/features_'+date)
-
-        feature_list = pickle.load(infile)
-        return feature_list
+        with open('models/features', 'r') as infile:
+            feature_list = pickle.load(infile)
+            return feature_list
 
     def _convert_query_to_dictionary(self, query):
         """Convert each user query to the format (refer to train.py) required by LibLINEAR
@@ -100,7 +89,7 @@ class Classifier(object):
         """
         query = query.lower()
         x = self._convert_query_to_dictionary(query)
-        p_label, p_val = predict(self.labels, x, self.action_model, '-b 0')
+        p_label, p_val = predict(self.labels, x, self.section_model, '-b 0')
         # print p_val
         if p_val[0][int(p_label[0])-1] == 0:
             p_label[0] = -1
