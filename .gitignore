@@ -20,3 +20,5 @@ models
 data
 *.sqlite3
 
+
+corpus
