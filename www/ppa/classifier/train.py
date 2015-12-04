@@ -117,12 +117,11 @@ def main():
     ### Train Wenjun's classifier
     # Name of files needed when training a model
 
-    date = time.strftime('%Y-%m-%d')
     train_file = 'data/training' # name of original training file
     raw_file = 'data/raw_data'
 
-    feature_file = 'models/training_file_'+date # name of transformed training file
-    feature_output = 'models/features_'+date # name of feature file
+    feature_file = 'models/training_file' # name of transformed training file
+    feature_output = 'models/features' # name of feature file
     stpfile = 'english.stp' # english stopwords file
     feature_arg = '-uni -pos2 -stem -stprm' # types of features need to extract
 
@@ -136,8 +135,10 @@ def main():
     training.convert_file()
     # Use LibLINEAR to train the model and save the model
     y, x = svm_read_problem(feature_file)
-    m = train(y, x, '-c 3 -s 1 -B 1 -e 0.01 -v 5 -q')
-    save_model('models/model_'+date, m)
+    m = train(y, x, '-c 3 -s 1 -B 1 -e 0.01 -q')
+
+    print m
+    save_model('models/model', m)
 
 if __name__ == '__main__':
     main()

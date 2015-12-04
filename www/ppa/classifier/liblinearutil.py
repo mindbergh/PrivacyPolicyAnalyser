@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
-import os
-import sys
-import time
+import os, sys
 sys.path = [os.path.dirname(os.path.abspath(__file__))] + sys.path 
 from liblinear import *
 from liblinear import __all__ as liblinear_all
@@ -157,23 +155,18 @@ def train(arg1, arg2=None, arg3=None):
 		target = (c_double * l)()
 		liblinear.cross_validation(prob, param, nr_fold, target)
 		ACC, MSE, SCC = evaluations(prob.y[:l], target[:l])
-		directory = os.getcwd()
-		result = open('models/training_log','a')
 		if param.solver_type in [L2R_L2LOSS_SVR, L2R_L2LOSS_SVR_DUAL, L2R_L1LOSS_SVR_DUAL]:
-			result.write("%s\nCross Validation Mean squared error : %g\nArguments: %s\n" 
-				% (time.strftime("%x"), MSE, options))
-			result.write("%s\nCross Validation Squared correlation coefficient : %g\nArguments: %s\n" 
-				% (time.strftime("%x"), SCC, options))
-			#return MSE
+			print("Cross Validation Mean squared error = %g" % MSE)
+			print("Cross Validation Squared correlation coefficient = %g" % SCC)
+			return MSE
 		else:
-			result.write("%s\nCross Validation Accuracy : %g%%\nArguments: %s\n" 
-				% (time.strftime("%x"), ACC, options))
-			#return ACC
-	#else :
-	m = liblinear.train(prob, param)
-	m = toPyModel(m)
+			print("Cross Validation Accuracy = %g%%" % ACC)
+			return ACC
+	else :
+		m = liblinear.train(prob, param)
+		m = toPyModel(m)
 
-	return m
+		return m
 
 def predict(y, x, m, options=""):
 	"""
@@ -252,15 +245,12 @@ def predict(y, x, m, options=""):
 			pred_values += [values]
 	if len(y) == 0:
 		y = [0] * len(x)
+	ACC, MSE, SCC = evaluations(y, pred_labels)
+	l = len(y)
+	if m.is_regression_model():
+		info("Mean squared error = %g (regression)" % MSE)
+		info("Squared correlation coefficient = %g (regression)" % SCC)
+	else:
+		info("Accuracy = %g%% (%d/%d) (classification)" % (ACC, int(l*ACC/100), l))
 
-	#The following part is 
-	#ACC, MSE, SCC = evaluations(y, pred_labels)
-	#l = len(y)
-	#if m.is_regression_model():
-	#	info("Mean squared error = %g (regression)" % MSE)
-	#	info("Squared correlation coefficient = %g (regression)" % SCC)
-	#else:
-	#	info("Accuracy = %g%% (%d/%d) (classification)" % (ACC, int(l*ACC/100), l))
-
-	#return pred_labels, (ACC, MSE, SCC), pred_values
-	return pred_labels, pred_values
+	return pred_labels, (ACC, MSE, SCC), pred_values

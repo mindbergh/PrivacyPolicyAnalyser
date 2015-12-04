@@ -16,7 +16,7 @@ try:
 	if sys.platform == 'win32':
 		liblinear = CDLL(path.join(dirname, r'..\windows\liblinear.dll'))
 	else:
-		liblinear = CDLL(path.join(dirname, 'liblinear.so.3'))
+		liblinear = CDLL(path.join(dirname, 'liblinear.so.2'))
 except:
 # For unix the prefix 'lib' is not considered.
 	if find_library('linear'):
@@ -89,7 +89,7 @@ class problem(Structure):
 	_types = [c_int, c_int, POINTER(c_double), POINTER(POINTER(feature_node)), c_double]
 	_fields_ = genFields(_names, _types)
 
-	def __init__(self, y, x, bias=-1):
+	def __init__(self, y, x, bias = -1):
 		if len(y) != len(x) :
 			raise ValueError("len(y) != len(x)")
 		self.l = l = len(y)
