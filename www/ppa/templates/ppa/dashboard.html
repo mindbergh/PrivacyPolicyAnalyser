@@ -38,12 +38,10 @@
                 <h3>
                     Summary
                 </h3>
-                {% for section in sections %}
+                {% for info in infos %}
                     <div class="list-group ">
                         <a href="#" class="list-group-item">
-                            <h4 class="list-group-item-heading">{{ section.subtitle | default_if_none:'Introduction' }}</h4>
-
-                            <p class="list-group-item-text">{{ section.subtext }}</p>
+                            <p class="list-group-item-text">{{ info }}</p>
                         </a>
                     </div>
                 {% endfor %}

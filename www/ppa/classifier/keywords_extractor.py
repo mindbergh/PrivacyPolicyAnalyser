@@ -41,7 +41,10 @@ topic[33] = set(["web browser"])
 def parse_segment(sgmt):
     tokens = nltk.word_tokenize(sgmt)
     parsed_list = [0] * len(topic)
-    for i in xrange(0, len(tokens)):
+    # len(tokens)
+    for i in range(0, len(tokens)):
+        # print "i:"+str(i)
+        # print "lentokenes:"+str(len(tokens))
         for k in range(0, len(topic)):
             if tokens[i].lower() in topic[k]:
                 parsed_list[k] = 1
@@ -49,7 +52,13 @@ def parse_segment(sgmt):
                 two_tokens = tokens[i].lower() + ' ' + tokens[i + 1].lower()
                 if two_tokens in topic[k]:
                     parsed_list[k] = 1
+        # print "here!!!!!!!!!!!!"
+        # print "i:"+str(i)
+        # print "lentokenes:"+str(len(tokens))
 
+    for i in range(0, len(tokens)):
+        pass
+        
 	return parsed_list
 
 
@@ -64,4 +73,5 @@ if __name__ == '__main__':
      The third-party advertising and analytics companies with whom we or our advertisers partner, including Google and New Relic, may place a unique cookie or utilize similar technologies on your browser in order to collect non-personal information about your visits to Lumosity. If you would like more information about this practice and how to control how this information is used by these companies, please visit the following links:
      http://www.networkadvertising.org/choice
      http://www.aboutads.info"""
-    parse_segment(sgmt)
+    #print sgmt
+    print parse_segment(sgmt)

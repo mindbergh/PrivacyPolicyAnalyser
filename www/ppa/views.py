@@ -25,6 +25,8 @@ def analyse(request):
         context['policy'] = policy
         context['sections'] = sections
 
-        get_instance().analyse(sections)
+        infos = get_instance().analyse(sections)
+
+        context['infos'] = infos
 
     return render(request, 'ppa/dashboard.html', context)
