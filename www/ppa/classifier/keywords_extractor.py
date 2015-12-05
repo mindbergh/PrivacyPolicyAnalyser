@@ -50,7 +50,7 @@ def parse_segment(sgmt):
                 if two_tokens in topic[k]:
                     parsed_list[k] = 1
 
-    print parsed_list
+	return parsed_list
 
 
 if __name__ == '__main__':
