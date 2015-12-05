@@ -5,12 +5,13 @@ class Analyser(object):
     def __init__(self):
         self._classifier = Classifier()
 
-
     def analyse(self, sections):
         topic = set()
         for section in sections:
-            if self._classifier._classify(section.subtitle) == 1:
-                pass
+            if section.subtitle is None:
+                continue
+            if self._classifier.classify(section.subtitle) == 1:
+                print section.subtitle
 
 
 instance = Analyser()
