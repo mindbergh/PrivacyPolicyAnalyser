@@ -27,6 +27,9 @@ def analyse(request):
 
         infos = get_instance().analyse(sections)
 
-        context['infos'] = infos
+        if len(infos) != 0:
+            context['infos'] = infos
+        else:
+            context['infos'] = ["Nothing!"]
 
     return render(request, 'ppa/dashboard.html', context)
