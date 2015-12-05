@@ -24,7 +24,7 @@ def parse_xml(filename):
         l_secs.append(t_sec)
         t_sec = []
 
-    policy = (os.path.basename(filename), l_secs)
+    policy = (os.path.basename(filename).replace(".xml", "").replace("_", "."), l_secs)
 
     return policy
 

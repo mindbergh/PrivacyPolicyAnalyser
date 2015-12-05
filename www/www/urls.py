@@ -19,4 +19,6 @@ from ppa import views
 
 urlpatterns = [
     url(r'^$', views.dashboard),
+    url(r'^next$', views.dashboard),
+    url(r'^analyse$', views.analyse),
 ]

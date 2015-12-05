@@ -34,3 +34,7 @@ button .btn {
 .padding {
     padding-bottom: 250px
 }
+
+.dashboard-btn {
+    width: 150px;
+}
